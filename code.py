@@ -11,7 +11,7 @@ import board
 import adafruit_hcsr04
 
 #constants
-led = digitalio.DigitalInOut(board.GP5)
+led = digitalio.DigitalInOut(board.LED)
 led.direction = digitalio.Direction.OUTPUT
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.GP2, echo_pin=board.GP3)
 
