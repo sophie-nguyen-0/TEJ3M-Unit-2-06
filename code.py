@@ -2,9 +2,10 @@
 March 25, 2025
 by: Sophie Nguyen
  
-using sonar with arduino
+using sonar with pico
 
 """
+
 import time
 import board
 import adafruit_hcsr04
@@ -33,7 +34,7 @@ while True:
     print(f"Distance: {distance} cm")
 
     # Turns on LED if an object’s distance is equal to or closer then 20 cm from the sonar
-    if distance <= too_close0:
+    if distance <= too_close:
         led.value = True
     else:
         led.value = False
