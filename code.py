@@ -15,7 +15,7 @@ import digitalio
 # variables
 seconds_to_microseconds_conversion_number = 1000000
 sonar_delays = [2 / seconds_to_microseconds_conversion_number, 10 / seconds_to_microseconds_conversion_number]
-delay_between_sonar_cheeks = 10
+delay_between_sonar_cheeks = 1
 distance = 0
 TOO_CLOSE = 20
 
@@ -27,9 +27,8 @@ sonar = adafruit_hcsr04.HCSR04(trigger_pin = board.GP15, echo_pin = board.GP14)
 # loop
 while True:
     # Sonar gets the distance form object
-    time.sleep(sonar_delays[0])
+    time.sleep(delay_between_sonar_cheeks)
     distance = sonar.distance
-    time.sleep(sonar_delays[1])
 
     print(f"Distance: {distance} cm")
 
